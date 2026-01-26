@@ -91,10 +91,6 @@
 
 - **メールアドレス**: saitoyutaro.official@gmail.com
 
----
-
-**MaruLog開発チーム**
-
 ## 付則
 
 本規約は2026年1月26日から施行します。
