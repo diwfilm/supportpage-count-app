@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaruLog - お問い合わせ</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .contact-item {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .contact-item i {
+            margin-right: 15px;
+            color: #4a90e2;
+            font-size: 1.2em;
+        }
+        .faq {
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin: 20px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+        .app-description {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.1em;
+            color: #666;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MaruLog</h1>
 
+        <div class="app-description">
+            習慣トラッキングアプリ - 毎日を円で記録し、視覚的に管理
+        </div>
+
+        <h2>お問い合わせ</h2>
+        <p>MaruLogをご利用いただきありがとうございます。ご質問やご意見などがございましたら、以下の連絡先までお気軽にお問い合わせください。</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i>📧</i>
+                <div>
+                    <strong>メールアドレス:</strong><br>
+                    saitoyutaro.official@gmail.com
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i>🐛</i>
+                <div>
+                    <strong>バグ報告・改善要望:</strong><br>
+                    GitHub Issues: <a href="https://github.com/diwfilm/maru_log/issues" target="_blank">https://github.com/diwfilm/maru_log/issues</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i>📱</i>
+                <div>
+                    <strong>対応OS:</strong><br>
+                    iOS 
+                </div>
+            </div>
+        </div>
+
+
+        <a href="#" class="back-link" onclick="window.history.back()">← 戻る</a>
+    </div>
+
+    <script>
+        // シンプルなFAQのアコーディオン機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                // 初期状態で回答を非表示
+                answer.style.display = 'none';
+
+                question.addEventListener('click', function() {
+                    const isVisible = answer.style.display === 'block';
+                    answer.style.display = isVisible ? 'none' : 'block';
+
+                    // アイコンの変更（オプション）
+                    const icon = this.querySelector('.faq-icon');
+                    if (icon) {
+                        icon.textContent = isVisible ? '▶' : '▼';
+                    }
+                });
+
+                // カーソルをポインタに変更
+                question.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body>
+</html>
